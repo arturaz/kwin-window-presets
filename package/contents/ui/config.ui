@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WindowPresetsConfig</class>
+ <widget class="QWidget" name="WindowPresetsConfig">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>640</width><height>520</height></rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="helpLabel">
+     <property name="text">
+      <string>&lt;b&gt;Changes take effect after the script is reloaded&lt;/b&gt; (untick/re-tick the script and Apply, run &lt;tt&gt;pnpm reload&lt;/tt&gt;, or log out and in). Key bindings for every action are edited under System Settings → Shortcuts → KWin (search “Window Presets”).</string>
+     </property>
+     <property name="wordWrap"><bool>true</bool></property>
+     <property name="textFormat"><enum>Qt::RichText</enum></property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="manualGroup">
+     <property name="title"><string>Custom presets</string></property>
+     <layout class="QVBoxLayout" name="manualLayout">
+      <item>
+       <widget class="QLabel" name="manualHelp">
+        <property name="text">
+         <string>One per line: &lt;b&gt;name | shortcut | x,y,width,height&lt;/b&gt; in global logical coordinates (see &lt;tt&gt;kscreen-doctor -o&lt;/tt&gt;). Lines starting with # are ignored; the shortcut may be empty.&lt;br/&gt;To capture a window: size it by hand, press &lt;b&gt;Meta+Ctrl+Alt+G&lt;/b&gt;, then paste the copied line here and rename it.</string>
+        </property>
+        <property name="wordWrap"><bool>true</bool></property>
+        <property name="textFormat"><enum>Qt::RichText</enum></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPlainTextEdit" name="kcfg_Presets">
+        <property name="font"><font><family>monospace</family></font></property>
+        <property name="lineWrapMode"><enum>QPlainTextEdit::NoWrap</enum></property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="autoGroup">
+     <property name="title"><string>Generated layouts (no default keys — bind them in Shortcuts → KWin)</string></property>
+     <layout class="QVBoxLayout" name="autoLayout">
+      <item><widget class="QCheckBox" name="kcfg_AutoSpanAll"><property name="text"><string>Span all screens</string></property></widget></item>
+      <item><widget class="QCheckBox" name="kcfg_AutoSpanPairs"><property name="text"><string>Span each pair of neighbouring screens</string></property></widget></item>
+      <item><widget class="QCheckBox" name="kcfg_AutoSeams"><property name="text"><string>Centre a screen-sized window on each seam between neighbouring screens</string></property></widget></item>
+      <item><widget class="QCheckBox" name="kcfg_AutoHalves"><property name="text"><string>Halves of the whole desktop</string></property></widget></item>
+      <item><widget class="QCheckBox" name="kcfg_AutoThirds"><property name="text"><string>Thirds of the whole desktop</string></property></widget></item>
+      <item><widget class="QCheckBox" name="kcfg_AutoUseWorkArea"><property name="text"><string>Keep generated layouts clear of panels</string></property></widget></item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

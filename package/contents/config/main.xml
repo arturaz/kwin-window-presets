@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile name=""/>
+  <group name="">
+    <!-- Keep the default in sync with DEFAULT_PRESETS in src/presets.ts:
+         KWin's readConfig() does not see kcfg defaults, the script has its own fallback. -->
+    <entry name="Presets" type="String">
+      <label>Window presets, one per line: name | shortcut | x,y,width,height</label>
+      <default># name | shortcut | x,y,width,height  (global logical coordinates)
+Span DP-2 + HDMI-A-1 | Meta+Ctrl+Alt+S | 0,0,3072,864
+Centre on DP-2/HDMI-A-1 seam | Meta+Ctrl+Alt+C | 768,0,1536,864</default>
+    </entry>
+    <!-- Generated layouts; defaults mirror readBool() calls in src/main.ts. -->
+    <entry name="AutoSpanAll" type="Bool">
+      <label>Span all screens</label>
+      <default>true</default>
+    </entry>
+    <entry name="AutoSpanPairs" type="Bool">
+      <label>Span each pair of neighbouring screens</label>
+      <default>true</default>
+    </entry>
+    <entry name="AutoSeams" type="Bool">
+      <label>Centre a screen-sized window on each seam</label>
+      <default>true</default>
+    </entry>
+    <entry name="AutoHalves" type="Bool">
+      <label>Halves of the whole desktop</label>
+      <default>true</default>
+    </entry>
+    <entry name="AutoThirds" type="Bool">
+      <label>Thirds of the whole desktop</label>
+      <default>true</default>
+    </entry>
+    <entry name="AutoUseWorkArea" type="Bool">
+      <label>Keep generated layouts clear of panels</label>
+      <default>true</default>
+    </entry>
+  </group>
+</kcfg>

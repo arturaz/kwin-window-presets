@@ -1,0 +1,25 @@
+{
+  "name": "kwin-window-presets",
+  "version": "1.0.0",
+  "private": true,
+  "description": "KWin script: global shortcuts that snap the active window to predefined (multi-monitor) geometries",
+  "license": "MIT",
+  "author": "Artūras Šlajus <as@arturaz.net>",
+  "homepage": "https://github.com/arturaz/kwin-window-presets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arturaz/kwin-window-presets.git"
+  },
+  "scripts": {
+    "build": "esbuild src/main.ts --bundle --format=iife --target=es2016 --platform=neutral --outfile=package/contents/code/main.js",
+    "typecheck": "tsc --noEmit",
+    "install-script": "sh scripts/install.sh",
+    "reload": "sh scripts/reload.sh",
+    "dist": "sh scripts/dist.sh"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "kwin-api": "^6.8.1",
+    "typescript": "^7.0.2"
+  }
+}

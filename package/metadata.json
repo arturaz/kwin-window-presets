@@ -1,0 +1,23 @@
+{
+    "KPackageStructure": "KWin/Script",
+    "KPlugin": {
+        "Id": "window-presets",
+        "Name": "Window Presets",
+        "Description": "Global shortcuts that snap the active window to predefined (multi-monitor) geometries",
+        "Authors": [
+            {
+                "Name": "Artūras Šlajus",
+                "Email": "as@arturaz.net"
+            }
+        ],
+        "Icon": "preferences-system-windows-move",
+        "License": "MIT",
+        "Version": "1.0.0",
+        "Website": "https://github.com/arturaz/kwin-window-presets",
+        "BugReportUrl": "https://github.com/arturaz/kwin-window-presets/issues",
+        "EnabledByDefault": false
+    },
+    "X-Plasma-API": "javascript",
+    "X-KDE-ConfigModule": "kwin/effects/configs/kcm_kwin4_genericscripted",
+    "X-Plasma-API-Minimum-Version": "6.0"
+}
